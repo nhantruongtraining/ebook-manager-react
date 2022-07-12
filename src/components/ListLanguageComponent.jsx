@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import LanguageService from "../services/LanguageService";
+import { useNavigate } from "react-router-dom";
 
 class ListLanguageComponent extends Component {
   constructor(props) {
@@ -24,6 +25,9 @@ class ListLanguageComponent extends Component {
   }
 
   viewLanguage(id) {
+    // const history = createBrowserHistory();
+    // history.push(`/view-language/${id}`);
+
     this.props.history.push(`/view-language/${id}`);
   }
 
