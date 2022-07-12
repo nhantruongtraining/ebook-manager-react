@@ -46,7 +46,7 @@ class ListLanguageComponent extends Component {
       <div>
         <h2 className="text-center">Languages List</h2>
         <div className="row">
-          <button class="btn btn-primary" onClick={this.addLanguage}>
+          <button className="btn btn-primary" onClick={this.addLanguage}>
             Add Language
           </button>
         </div>
