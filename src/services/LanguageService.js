@@ -4,6 +4,7 @@ const LANGUAGE_API_BASE_URL = "http://localhost:8080/api/languages";
 
 class LanguageService {
     getLanguages() {
+        // console.log(axios.get(LANGUAGE_API_BASE_URL))
         return axios.get(LANGUAGE_API_BASE_URL);
     }
 
@@ -15,11 +16,11 @@ class LanguageService {
         return axios.get(LANGUAGE_API_BASE_URL + '/' + languageId);
     }
 
-    updateLanguageById(language, languageId) {
-        return axios.put(LANGUAGE_API_BASE_URL + '/' + language, languageId);
+    updateLanguage(language, languageId) {
+        return axios.put(LANGUAGE_API_BASE_URL + '/' + languageId, language);
     }
 
-    deleteLanguageById(languageId) {
+    deleteLanguage(languageId) {
         return axios.delete(LANGUAGE_API_BASE_URL + '/' + languageId);
     }
 }

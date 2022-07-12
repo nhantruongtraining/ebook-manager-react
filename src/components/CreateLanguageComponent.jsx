@@ -12,7 +12,7 @@ class CreateLanguageComponent extends Component {
       code: "",
     };
     this.changeLanguageNameHandler = this.changeLanguageNameHandler.bind(this);
-    this.changeCodeHandler = this.changeCode.bind(this);
+    this.changeLanguageCodeHandler = this.changeLanguageCodeHandler.bind(this);
     this.saveOrUpdateLanguage = this.saveOrUpdateLanguage.bind(this);
   }
 
@@ -55,7 +55,7 @@ class CreateLanguageComponent extends Component {
     this.setState({ name: event.target.value });
   };
 
-  changeCodeHandler = (event) => {
+  changeLanguageCodeHandler = (event) => {
     this.setState({ code: event.target.value });
   };
 
@@ -83,7 +83,7 @@ class CreateLanguageComponent extends Component {
                   <div className="form-group">
                     <label> Language Name: </label>
                     <input
-                      placeholder="Name"
+                      placeholder="Vietnamese"
                       name="name"
                       className="form-control"
                       value={this.state.name}
@@ -93,14 +93,14 @@ class CreateLanguageComponent extends Component {
                   <div className="form-group">
                     <label> Language Code: </label>
                     <input
-                      placeholder="Code"
+                      placeholder="vi"
                       name="code"
                       className="form-control"
                       value={this.state.code}
-                      onChange={this.changeCodeHandler}
+                      onChange={this.changeLanguageCodeHandler}
                     />
                   </div>
-
+                  <br />
                   <button
                     className="btn btn-success"
                     onClick={this.saveOrUpdateLanguage}

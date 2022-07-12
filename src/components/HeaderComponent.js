@@ -14,7 +14,7 @@ class HeaderComponent extends Component {
             <div>
                 <header>
                     <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-                        <div><a href="https://www.edu.axonactive.com/" className="navbar-brand">Ebook Management App</a></div>
+                        <div><a href="http://localhost:3000/" className="navbar-brand">Ebook Management App</a></div>
                     </nav>
                 </header>
             </div>

@@ -44,9 +44,10 @@ class ListLanguageComponent extends Component {
   render() {
     return (
       <div>
-        <h2 className="text-center">Languages List</h2>
+        <h2 className="text-center">Language List</h2>
         <div className="row">
           <button className="btn btn-primary" onClick={this.addLanguage}>
+            {" "}
             Add Language
           </button>
         </div>
@@ -56,14 +57,17 @@ class ListLanguageComponent extends Component {
           <table className="table table-striped table-bordered">
             <thead>
               <tr>
+                {/* <th> ID</th> */}
                 <th> Language Name</th>
                 <th> Language Code</th>
+                <th> Actions</th>
               </tr>
             </thead>
 
             <tbody>
               {this.state.languages.map((language) => (
                 <tr key={language.id}>
+                  {/* <td> {language.id}</td> */}
                   <td> {language.name}</td>
                   <td> {language.code}</td>
                   <td>

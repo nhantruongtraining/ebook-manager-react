@@ -1,11 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ListLanguageComponent from './components/ListLanguageComponent';
 import HeaderComponent from './components/HeaderComponent';
 import FooterComponent from './components/FooterComponent';
 import CreateLanguageComponent from './components/CreateLanguageComponent';
+// import UpdateLanguageComponent from '.components/UpdateLanguageComponent';
 import ViewLanguageComponent from './components/ViewLanguageComponent';
 
 function App() {
