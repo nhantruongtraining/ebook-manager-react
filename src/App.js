@@ -15,10 +15,10 @@ function App() {
         <HeaderComponent />
         <div className="container">
           <Routes>
-            <Route path="/" element={ListLanguageComponent}></Route>
-            <Route path="/languages" element={ListLanguageComponent}></Route>
-            <Route path="/add-language/:id" element={CreateLanguageComponent}></Route>
-            <Route path="/view-language/:id" element={ViewLanguageComponent}></Route>
+            <Route path="/" element={ListLanguageComponent} />
+            <Route path="/languages" element={ListLanguageComponent} />
+            <Route path="/add-language/:id" element={CreateLanguageComponent} />
+            <Route path="/view-language/:id" element={ViewLanguageComponent} />
             {/* <Route path = "/update-language/:id" element = {UpdateLanguageComponent}></Route> */}
           </Routes>
         </div>
