@@ -97,3 +97,5 @@ class ListLanguageComponent extends Component {
     );
   }
 }
+
+export default ListLanguageComponent;
