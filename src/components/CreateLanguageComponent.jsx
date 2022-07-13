@@ -83,7 +83,7 @@ class CreateLanguageComponent extends Component {
                   <div className="form-group">
                     <label> Language Name: </label>
                     <input
-                      placeholder="Vietnamese"
+                      placeholder="name"
                       name="name"
                       className="form-control"
                       value={this.state.name}
@@ -93,14 +93,13 @@ class CreateLanguageComponent extends Component {
                   <div className="form-group">
                     <label> Language Code: </label>
                     <input
-                      placeholder="vi"
+                      placeholder="code"
                       name="code"
                       className="form-control"
                       value={this.state.code}
                       onChange={this.changeLanguageCodeHandler}
                     />
                   </div>
-                  <br />
                   <button
                     className="btn btn-success"
                     onClick={this.saveOrUpdateLanguage}
