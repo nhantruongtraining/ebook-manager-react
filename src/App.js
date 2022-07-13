@@ -9,6 +9,7 @@ import FooterComponent from './components/FooterComponent';
 import CreateLanguageComponent from './components/CreateLanguageComponent';
 // import UpdateLanguageComponent from '.components/UpdateLanguageComponent';
 import ViewLanguageComponent from './components/ViewLanguageComponent';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/languages" component={ListLanguageComponent}></Route>
             <Route path="/add-language/:id" component={CreateLanguageComponent}></Route>
             <Route path="/view-language/:id" component={ViewLanguageComponent}></Route>
+            <Route path="*" component={NotFound}></Route>
             {/* <Route path = "/update-language/:id" component = {UpdateLanguageComponent}></Route> */}
           </Switch>
         </div>
