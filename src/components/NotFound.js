@@ -5,7 +5,7 @@ const NotFound = () => {
         <div>
             <br></br>
             <h3>Awesome thing is on the way.<br />
-                <small class="text-muted">We are working on this feature and will lauch soon.</small></h3>
+                <small className="text-muted">We are working on this feature and will lauch soon.</small></h3>
         </div>
     );
 }
