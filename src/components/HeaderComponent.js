@@ -15,7 +15,13 @@ class HeaderComponent extends Component {
             <div>
                 <header>
                     <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-                        <div><a href="http://localhost:3000/" className="navbar-brand">Ebook Management App</a></div>
+                        <div><img
+                            alt=""
+                            src="logo.png"
+                            width="50"
+                            height="50"
+                            className="d-inline-block align-top"
+                        />{' '}<a href="http://localhost:3000/" className="navbar-brand">Ebook Management App</a></div>
                         <div className="navbar-nav mr-auto">
                             <li className="nav-item">
                                 <Link to="/authors" className="nav-link">Authors</Link>

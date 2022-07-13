@@ -25,11 +25,11 @@ class ViewLanguageComponent extends Component {
           <h3 className="text-center"> View Language Details</h3>
           <div className="card-body">
             <div className="row">
-              <label> Language Name: </label>
+              <label>Language Name: &nbsp;</label>
               <div> {this.state.language.name}</div>
             </div>
             <div className="row">
-              <label> Language Code: </label>
+              <label>Language Code: &nbsp;</label>
               <div> {this.state.language.code}</div>
             </div>
           </div>
