@@ -3,7 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ListLanguageComponent from './components/languages/ListLanguageComponent';
-import HeaderComponent from './components/HeaderComponent';
+import HeaderComponent from './components/homepage/HeaderComponent';
 import FooterComponent from './components/homepage/FooterComponent';
 import CreateLanguageComponent from './components/languages/CreateLanguageComponent';
 // import UpdateLanguageComponent from '.components/UpdateLanguageComponent';
