@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import LanguageService from "../services/LanguageService";
+import LanguageService from "../../services/LanguageService";
 
 class ViewLanguageComponent extends Component {
   constructor(props) {
