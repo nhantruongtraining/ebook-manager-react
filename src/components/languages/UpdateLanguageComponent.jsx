@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import LanguageService from "../../services/LanguageService";
+import LanguageService from "./LanguageService";
 class UpdateLanguageComponent extends Component {
   constructor(props) {
     super(props);
