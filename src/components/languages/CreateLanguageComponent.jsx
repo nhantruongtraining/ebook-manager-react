@@ -1,48 +1,60 @@
 import React, { Component } from "react";
-import LanguageService from "../services/LanguageService";
-
-class UpdateLanguageComponent extends Component {
+import LanguageService from "./LanguageService";
+class CreateLanguageComponent extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      // step 2
       id: this.props.match.params.id,
       name: "",
       code: "",
     };
     this.changeLanguageNameHandler = this.changeLanguageNameHandler.bind(this);
-    this.changeCodeHandler = this.changeCodeHandler.bind(this);
-    this.updateLanguage = this.updateLanguage.bind(this);
+    this.changeLanguageCodeHandler = this.changeLanguageCodeHandler.bind(this);
+    this.saveOrUpdateLanguage = this.saveOrUpdateLanguage.bind(this);
   }
 
+  // step 3
   componentDidMount() {
-    LanguageService.getLanguageById(this.state.id).then((res) => {
-      let language = res.data;
-      this.setState({
-        name: language.name,
-        code: language.code,
+    // step 4
+    if (this.state.id === "_add") {
+      return;
+    } else {
+      LanguageService.getLanguageById(this.state.id).then((res) => {
+        let language = res.data;
+        this.setState({
+          name: language.name,
+          code: language.code,
+        });
       });
-    });
+    }
   }
-
-  updateLanguage = (e) => {
+  saveOrUpdateLanguage = (e) => {
     e.preventDefault();
     let language = {
       name: this.state.name,
       code: this.state.code,
     };
     console.log("language => " + JSON.stringify(language));
-    console.log("id => " + JSON.stringify(this.state.id));
-    LanguageService.updateLanguage(language, this.state.id).then((res) => {
-      this.props.history.push("/languages");
-    });
+
+    // step 5
+    if (this.state.id === "_add") {
+      LanguageService.createLanguage(language).then((res) => {
+        this.props.history.push("/languages");
+      });
+    } else {
+      LanguageService.updateLanguage(language, this.state.id).then((res) => {
+        this.props.history.push("/languages");
+      });
+    }
   };
 
   changeLanguageNameHandler = (event) => {
     this.setState({ name: event.target.value });
   };
 
-  changeCodeHandler = (event) => {
+  changeLanguageCodeHandler = (event) => {
     this.setState({ code: event.target.value });
   };
 
@@ -50,6 +62,13 @@ class UpdateLanguageComponent extends Component {
     this.props.history.push("/languages");
   }
 
+  getTitle() {
+    if (this.state.id === "_add") {
+      return <h3 className="text-center">Add Language</h3>;
+    } else {
+      return <h3 className="text-center">Update Language</h3>;
+    }
+  }
   render() {
     return (
       <div>
@@ -57,13 +76,13 @@ class UpdateLanguageComponent extends Component {
         <div className="container">
           <div className="row">
             <div className="card col-md-6 offset-md-3 offset-md-3">
-              <h3 className="text-center">Update Language</h3>
+              {this.getTitle()}
               <div className="card-body">
                 <form>
                   <div className="form-group">
                     <label> Language Name: </label>
                     <input
-                      placeholder="Language Name"
+                      placeholder="name"
                       name="name"
                       className="form-control"
                       value={this.state.name}
@@ -73,17 +92,16 @@ class UpdateLanguageComponent extends Component {
                   <div className="form-group">
                     <label> Language Code: </label>
                     <input
-                      placeholder="Language Code"
+                      placeholder="code"
                       name="code"
                       className="form-control"
                       value={this.state.code}
-                      onChange={this.changeCodeHandler}
+                      onChange={this.changeLanguageCodeHandler}
                     />
                   </div>
-
                   <button
                     className="btn btn-success"
-                    onClick={this.updateLanguage}
+                    onClick={this.saveOrUpdateLanguage}
                   >
                     Save
                   </button>
@@ -104,4 +122,4 @@ class UpdateLanguageComponent extends Component {
   }
 }
 
-export default UpdateLanguageComponent;
+export default CreateLanguageComponent;
