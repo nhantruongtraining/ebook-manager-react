@@ -21,7 +21,7 @@ class ViewEbookComponent extends Component {
     return (
       <div>
         <br></br>
-        <div className="card col-md-6 offset-md-3">
+        <div className="card col-ld-6 offset-md-3">
           <h3 className="text-center"> View Ebook Details</h3>
           <div className="card-body">
             <div className="row">

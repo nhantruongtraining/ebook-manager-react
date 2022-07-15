@@ -86,13 +86,13 @@ class ListEbookComponent extends Component {
                     >
                       Delete{" "}
                     </button>
-                    {/* <button
+                    <button
                       style={{ marginLeft: "10px" }}
                       onClick={() => this.viewEbook(ebook.id)}
                       className="btn btn-info"
                     >
                       View{" "}
-                    </button> */}
+                    </button>
                   </td>
                 </tr>
               ))}

@@ -173,7 +173,7 @@ class CreateEbookComponent extends Component {
                   </div>
                   <button
                     className="btn btn-success"
-                    onClick={this.saveOrUpdateLanguage}
+                    onClick={this.saveOrUpdateEbook}
                   >
                     Save
                   </button>
