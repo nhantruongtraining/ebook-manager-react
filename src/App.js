@@ -21,6 +21,7 @@ function App() {
         <div className="container">
           <Switch>
             <Route path="/" exact component={ListEbookComponent}></Route>
+
             <Route path="/ebooks" component={ListEbookComponent}></Route>
             <Route path="/add-ebook/:id" component={CreateEbookComponent}></Route>
             <Route path="/view-ebook/:id" component={ViewEbookComponent}></Route>
@@ -28,9 +29,9 @@ function App() {
             <Route path="/languages" component={ListLanguageComponent}></Route>
             <Route path="/add-language/:id" component={CreateLanguageComponent}></Route>
             <Route path="/view-language/:id" component={ViewLanguageComponent}></Route>
+            {/* <Route path = "/update-language/:id" component = {UpdateLanguageComponent}></Route> */}
 
             <Route path="*" component={NotFound}></Route>
-            {/* <Route path = "/update-language/:id" component = {UpdateLanguageComponent}></Route> */}
           </Switch>
         </div>
         <FooterComponent />

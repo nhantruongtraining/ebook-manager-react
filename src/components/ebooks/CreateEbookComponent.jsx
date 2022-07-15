@@ -10,8 +10,8 @@ class CreateEbookComponent extends Component {
       title: "",
       description: "",
       publishYear: "",
-      languageId: "",
       publisherId: "",
+      languageId: "",
       categoryId: "",
     };
     this.changeTitleHandler = this.changeTitleHandler.bind(this);
@@ -35,8 +35,8 @@ class CreateEbookComponent extends Component {
           title: ebook.title,
           description: ebook.description,
           publishYear: ebook.publishYear,
-          languageId: ebook.languageId,
           publisherId: ebook.publisherId,
+          languageId: ebook.languageId,
           categoryId: ebook.categoryId,
         });
       });
@@ -48,8 +48,8 @@ class CreateEbookComponent extends Component {
       title: this.state.title,
       description: this.state.description,
       publishYear: this.state.publishYear,
-      languageId: this.state.languageId,
       publisherId: this.state.publisherId,
+      languageId: this.state.languageId,
       categoryId: this.state.categoryId,
     };
     console.log("ebook => " + JSON.stringify(ebook));
@@ -78,12 +78,12 @@ class CreateEbookComponent extends Component {
     this.setState({ publishYear: event.target.value });
   };
 
-  changeLanguageIdHandler = (event) => {
-    this.setState({ languageId: event.target.value });
-  };
-
   changePublisherIdHandler = (event) => {
     this.setState({ publisherId: event.target.value });
+  };
+
+  changeLanguageIdHandler = (event) => {
+    this.setState({ languageId: event.target.value });
   };
 
   changeCategoryIdHandler = (event) => {
