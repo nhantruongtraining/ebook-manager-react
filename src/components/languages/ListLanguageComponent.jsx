@@ -88,13 +88,13 @@ class ListLanguageComponent extends Component {
                     >
                       Delete{" "}
                     </button>
-                    <button
+                    {/* <button
                       style={{ marginLeft: "10px" }}
                       onClick={() => this.viewLanguage(language.id)}
                       className="btn btn-info"
                     >
                       View{" "}
-                    </button>
+                    </button> */}
                   </td>
                 </tr>
               ))}
