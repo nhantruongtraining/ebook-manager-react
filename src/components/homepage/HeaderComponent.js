@@ -24,7 +24,7 @@ class HeaderComponent extends Component {
                         />{' '}<a href="http://localhost:3000/" className="navbar-brand">Ebook Management App</a></div>
                         <div className="navbar-nav mr-auto">
                             <li className="nav-item">
-                                <Link to="/userebooks" className="nav-link">Your ebooks</Link>
+                                <Link to="/ebooks" className="nav-link">Ebooks</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/languages" className="nav-link">Languages</Link>
